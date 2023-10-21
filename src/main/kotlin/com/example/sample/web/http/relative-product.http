@@ -1,0 +1,32 @@
+### 연관상품 등록
+POST http://localhost:8080/relative-product
+Content-Type: application/json
+
+{
+  "targetProductId": 300002301,
+  "resultProductId": 300002285,
+  "score": 15
+}
+
+### 연관상품 삭제
+DELETE http://localhost:8080/relative-product
+Content-Type: application/json
+
+{
+  "targetProductId": 300002301,
+  "resultProductId": 300002285
+}
+
+### 연관상품 업데이트
+PUT http://localhost:8080/relative-product
+Content-Type: application/json
+
+{
+  "targetProductId": 300002301,
+  "resultProductId": 300003606,
+  "changeResultProductId": 300002285,
+  "score": 20
+}
+
+### 연관상품 조회
+GET http://localhost:8080/relative-product?productIds=300002285,300002301
